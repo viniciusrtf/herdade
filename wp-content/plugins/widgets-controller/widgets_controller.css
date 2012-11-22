@@ -1,0 +1,15 @@
+/* CSS Document */
+
+div.widgets_controller_box { font-size:11px; background:#fff; border:solid 1 #eee; outline:solid 2px #ccc; position:absolute; width:800px; right:115px; padding:5px; margin-top:30px; }
+div.widgets_controller_box span.show_detail { padding:2px 5px; background:#eee; border:solid 1px #ddd; border-radius:3px; display:inline-block; float:right; cursor:pointer; font-weight:bold; text-transform:uppercase; color:#F77322; }
+div.widgets_controller_box.none { display:none; }
+.widget .widget-inside div.widgets_controller_box p { margin:3px 0; padding:0 10px; }
+div.widgets_controller_box input[type=checkbox] { margin-right:5px; vertical-align:top; }
+div.widgets_controller_box label { text-transform:lowercase; }
+div.widgets_controller_box div.overflow { max-height:200px; overflow:auto; }
+div.widgets_controller_box p { background:#f1f1f1; border:solid 1px #ddd; text-transform:uppercase; font-size:11px; font-weight:bold; color:#F77322; }
+div.widgets_controller_box div span { width:24.5%; display:inline-block; vertical-align:top; }
+div.widgets_controller_box div label { display:inline-block; width:80%; }
+label.manage_label { font-size:11px; color:#F77322; font-weight:bold; text-transform:uppercase; margin-left:5px; }
+div.widgets_controller_box div.loading { text-align:center; padding-top:10px; }
+label.hl { color:#fff; background:#000; }
