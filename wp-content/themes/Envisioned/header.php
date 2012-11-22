@@ -44,7 +44,6 @@
 							<img src="<?php echo esc_url($logo); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" id="logo"/>
 						</a>
 						<?php do_action('et_header'); ?>
-						<!--
 						<div id="menu" class="clearfix">
 							<div id="menu-right">
 								<div id="menu-content">
@@ -62,7 +61,7 @@
 											
 											<?php show_page_menu($menuClass,false,false); ?>
 											<?php show_categories_menu($menuClass,false); ?>
-										</ul> <!-- end ul#nav --/>
+										</ul> <!-- end ul#nav -->
 									<?php }
 									else echo($primaryNav); ?>
 																		

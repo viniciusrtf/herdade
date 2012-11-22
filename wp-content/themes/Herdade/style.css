@@ -1,0 +1,14 @@
+/*
+Theme Name: Herdade (child of Envisioned)
+Template: Envisioned
+Theme URI: http://www.elegantthemes.com/gallery/
+Version: 0.1
+Description: Child theme for '2 Column theme from Elegant Themes'
+Author: Vinicius R T Ferraz
+Author URI: http://www.viniciusferraz.com/
+*/
+
+@import url("../Envisioned/style.css");
+
+#logo { margin:20px 130px 35px; }
+#menu { display:none; visibility:hidden; }
