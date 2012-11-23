@@ -13,8 +13,12 @@ Author URI: http://www.viniciusferraz.com/
 #logo { margin:20px 130px 35px; }
 #menu { display:none; visibility:hidden; }
 #quote { margin-bottom:69px; }
-#home-gallery .container { width:410px; padding-left: 50px; }
-#home-gallery h2 { padding-left:90px; margin-bottom:10px; }
+#home-gallery { background: url(images/quote-bg.png) repeat-x left bottom; margin-top:20px; margin-bottom:50px; padding-bottom:3px; }
+#home-gallery-inner { background: #F4F4F4 url(images/quote-inner-bg.png) repeat-x; }
+#home-gallery-inner .container { width:410px; padding-left:50px; padding-top:20px; }
+#home-gallery-inner h2 { padding-left:90px; margin-bottom:10px; }
 #featured h2 { padding-left:380px; }
 .slide { margin-top:30px; }
 #footer-widgets { padding-left:350px; }
+.footer-widget { color:#ededed; }
+.footer-widget strong { color:white; }

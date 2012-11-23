@@ -42,38 +42,40 @@
 
 	<?php if ( get_option('envisioned_display_media') == 'on' ){ ?>
 		<div id="home-gallery">
-			<div class="container clearfix">
-				<h2>Produtos Atuais</h2>
-				<?php
-					$media_current_post = 1;
-				?>
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<?php 
-						$width = 140;
-						$height = 94;
-						$titletext = get_the_title();
-						$thumbnail = get_thumbnail($width,$height,'project-image',$titletext,$titletext,true,'Media');
-						$thumb = $thumbnail["thumb"];
-						$et_medialink = get_post_meta($post->ID,'et_medialink',true) ? get_post_meta($post->ID,'et_medialink',true) : '';
-						$et_videolink = get_post_meta($post->ID,'et_videolink',true) ? get_post_meta($post->ID,'et_videolink',true) : '';
+			<div id="home-gallery-inner">
+				<div class="container clearfix">
+					<h2>Produtos Atuais</h2>
+					<?php
+						$media_current_post = 1;
 					?>
-					<div class="project<?php if ( $media_current_post % 5 == 0 ) echo ' last'; ?>">
-						<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, 'project-image'); ?>
-						<span class="project-overlay"></span>
-						<?php if ( $et_medialink <> '' ) { ?>
-							<a href="<?php echo esc_url($et_medialink); ?>" class="zoom-icon">
-						<?php } elseif ( $et_videolink <> '' ) { ?>
-							<a href="<?php echo esc_url($et_videolink); ?>" class="et-video zoom-icon et_video_lightbox" title="<?php echo esc_attr($titletext); ?>">
-						<?php } else { ?>
-							<a href="<?php echo esc_url($thumbnail["fullpath"]); ?>" class="zoom-icon fancybox" rel="media" title="<?php echo esc_attr($titletext); ?>">
-						<?php } ?><?php esc_html_e('Zoom In','Envisioned'); ?>
-							</a>
-							<a href="<?php the_permalink(); ?>" class="more-icon"><?php esc_html_e('Read more','Envisioned'); ?></a>
-					</div> 	<!-- end .project -->
-				<?php $media_current_post++;
-				endwhile; ?>
-				<?php endif; ?>				
-			</div> <!-- end .container -->
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php 
+							$width = 140;
+							$height = 94;
+							$titletext = get_the_title();
+							$thumbnail = get_thumbnail($width,$height,'project-image',$titletext,$titletext,true,'Media');
+							$thumb = $thumbnail["thumb"];
+							$et_medialink = get_post_meta($post->ID,'et_medialink',true) ? get_post_meta($post->ID,'et_medialink',true) : '';
+							$et_videolink = get_post_meta($post->ID,'et_videolink',true) ? get_post_meta($post->ID,'et_videolink',true) : '';
+						?>
+						<div class="project<?php if ( $media_current_post % 5 == 0 ) echo ' last'; ?>">
+							<?php print_thumbnail($thumb, $thumbnail["use_timthumb"], $titletext, $width, $height, 'project-image'); ?>
+							<span class="project-overlay"></span>
+							<?php if ( $et_medialink <> '' ) { ?>
+								<a href="<?php echo esc_url($et_medialink); ?>" class="zoom-icon">
+							<?php } elseif ( $et_videolink <> '' ) { ?>
+								<a href="<?php echo esc_url($et_videolink); ?>" class="et-video zoom-icon et_video_lightbox" title="<?php echo esc_attr($titletext); ?>">
+							<?php } else { ?>
+								<a href="<?php echo esc_url($thumbnail["fullpath"]); ?>" class="zoom-icon fancybox" rel="media" title="<?php echo esc_attr($titletext); ?>">
+							<?php } ?><?php esc_html_e('Zoom In','Envisioned'); ?>
+								</a>
+								<a href="<?php the_permalink(); ?>" class="more-icon"><?php esc_html_e('Read more','Envisioned'); ?></a>
+						</div> 	<!-- end .project -->
+					<?php $media_current_post++;
+					endwhile; ?>
+					<?php endif; ?>				
+				</div> <!-- end .container -->
+			</div>
 		</div> <!-- end #home-gallery -->	
 	<?php } ?>
 	
