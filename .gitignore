@@ -17,3 +17,6 @@ restore/
 .project
 .buildpath
 .settings/
+*.sql
+dbfix.php
+error_log
